@@ -1,5 +1,9 @@
 package com.puzzleitc
 
+/**
+ * Convenient methods for OpenShift management.
+ */
+
 def tar(openShiftConfigDir, String... deployables) {
   String potHome = tool("pot")
   sh "${potHome}/bin/pot tar ${openShiftConfigDir} ${deployables.join(' ')}"
